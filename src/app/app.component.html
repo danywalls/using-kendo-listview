@@ -3,7 +3,10 @@
 </header>
 <main>
   @for(country of countries; track country){
-    {{country | json}}
+    <div class="country">
+    <h2>{{country.country}}</h2>
+   <app-chart-stats [data]="country.data" field="framework" category="usage"/>
+    </div>
   }
 </main>
 <footer>
