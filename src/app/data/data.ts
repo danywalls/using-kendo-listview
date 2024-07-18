@@ -1,7 +1,5 @@
 
-
-
-const countries = [
+export const countriesData = [
 
   {
     country: "US",
@@ -18,7 +16,7 @@ const countries = [
 
   },
   {
-    country: "US",
+    country: "Spain",
     data: [
       {
         product: "Angular",
@@ -32,7 +30,7 @@ const countries = [
 
   },
   {
-    country: "US",
+    country: "Dominican Republic",
     data: [
       {
         product: "Angular",
