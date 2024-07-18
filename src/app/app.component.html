@@ -2,6 +2,8 @@
   <h1>Frameworks Usage</h1>
 </header>
 <main>
+
+  <button (click)="nextPage()">next</button>
   @for (country of countries; track country) {
     <div class="country">
       <h2>{{ country.country }}</h2>
