@@ -10,3 +10,10 @@ type CountryData = {
 };
 
 export type CountriesData = CountryData[];
+
+export interface PaginationResult {
+  items: Array<any>;
+  totalItems: number;
+  currentPage: number;
+  totalPages: number;
+}

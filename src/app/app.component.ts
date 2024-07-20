@@ -3,37 +3,25 @@ import { RouterOutlet } from '@angular/router';
 import { frameworkUsage } from './data/data';
 import { ChartStatsComponent } from './components/chart-stats/chart-stats.component';
 import { PaginationService } from './services/pagination.service';
+import {
+  ListViewModule,
+  PagerSettings,
+} from '@progress/kendo-angular-listview';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ChartStatsComponent],
+  imports: [RouterOutlet, ChartStatsComponent, ListViewModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
-export class AppComponent implements OnInit {
-  dataServer = frameworkUsage;
-  countries: any = [];
-  currentPage = 1;
-  pageSize = 3;
-  paginationService = inject(PaginationService);
+export class AppComponent {
+  country = frameworkUsage;
 
-  ngOnInit(): void {
-    this.bindData();
-  }
-
-  bindData() {
-    const paginatedResult = this.paginationService.paginateData(
-      this.dataServer,
-      this.currentPage,
-      this.pageSize,
-    );
-
-    this.countries = paginatedResult.items;
-  }
-
-  nextPage() {
-    this.currentPage = this.currentPage + 1;
-    this.bindData();
-  }
+  public pagerSettings: PagerSettings = {
+    previousNext: false,
+    pageSizeValues: true,
+    buttonCount: 9,
+  };
+  public pageSize = 2;
 }

@@ -2,17 +2,30 @@
   <h1>Frameworks Usage</h1>
 </header>
 <main>
-
-  <button (click)="nextPage()">next</button>
-  @for (country of countries; track country) {
-    <div class="country">
-      <h2>{{ country.country }}</h2>
+<p></p>
+  <kendo-listview
+    [height]="550"
+    [kendoListViewBinding]="country"
+    [pageable]="pagerSettings"
+    [pageSize]="pageSize"
+    containerClass="listview-content"
+  >
+    <ng-template
+      kendoListViewItemTemplate
+      let-dataItem="dataItem"
+      let-isLast="isLast"
+    >
+      <h3>{{dataItem.country}}</h3>
       <app-chart-stats
-        [data]="country.data"
+        [data]="dataItem.data"
         field="framework"
         category="usage"
       />
-    </div>
-  }
+    </ng-template>
+    <ng-template kendoListViewFooterTemplate>
+      <div class="footer-note"> </div>
+    </ng-template>
+  </kendo-listview>
+
 </main>
 <footer></footer>
