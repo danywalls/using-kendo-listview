@@ -9,3 +9,7 @@
 html, body {
   overflow: hidden;
 }
+
+.red {
+  background: red!important;
+}

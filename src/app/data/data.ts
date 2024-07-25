@@ -1,6 +1,4 @@
-import { CountriesData } from '../models/entities';
-
-export const frameworkUsage: CountriesData = [
+export const frameworkUsage = [
   {
     country: 'France',
     data: [

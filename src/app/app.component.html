@@ -2,30 +2,28 @@
   <h1>Frameworks Usage</h1>
 </header>
 <main>
-<p></p>
+  <p></p>
   <kendo-listview
     [height]="550"
     [kendoListViewBinding]="country"
     [pageable]="pagerSettings"
     [pageSize]="pageSize"
-    containerClass="listview-content"
   >
     <ng-template
       kendoListViewItemTemplate
       let-dataItem="dataItem"
       let-isLast="isLast"
     >
-      <h3>{{dataItem.country}}</h3>
+      <h3>{{ dataItem.country }}</h3>
+      @if (isLast) {
+        <p>You reach the limit</p>
+      }
       <app-chart-stats
         [data]="dataItem.data"
         field="framework"
         category="usage"
       />
     </ng-template>
-    <ng-template kendoListViewFooterTemplate>
-      <div class="footer-note"> </div>
-    </ng-template>
   </kendo-listview>
-
 </main>
 <footer></footer>
