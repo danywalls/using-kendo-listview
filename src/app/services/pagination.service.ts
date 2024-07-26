@@ -1,5 +1,11 @@
 import { Injectable } from '@angular/core';
-import { PaginationResult } from '../models/entities';
+
+export interface PaginationResult {
+  items: Array<any>;
+  totalItems: number;
+  currentPage: number;
+  totalPages: number;
+}
 
 @Injectable({
   providedIn: 'root',
