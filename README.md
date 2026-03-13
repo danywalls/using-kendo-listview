@@ -14,6 +14,17 @@ Create a dynamic dashboard featuring charts organized within a Kendo UI for Angu
 1. `ng serve` 
 2. Explore the chart dashboard with pagination.
 
+## Project Summary
+Create a dynamic dashboard featuring charts organized within a Kendo UI for Angular ListView, including custom pagination.
+
+## How to Run
+### Installation
+1. `npm install` 
+
+### Running
+1. `ng serve` 
+2. Explore the chart dashboard with pagination.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.0.
 
 ## Development server
