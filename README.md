@@ -1,4 +1,18 @@
-# ListviewCharts
+> [!NOTE]
+> This repository contains the source code for the article: **[Dashboard with Charts Using Kendo UI for Angular ListView](https://www.telerik.com/blogs/build-dashboard-charts-using-kendo-ui-angular-listview)** originally published on [Telerik Blogs](https://www.telerik.com/blogs).
+
+# Dashboard with Charts Using Kendo UI for Angular ListView
+
+## Project Summary
+Create a dynamic dashboard featuring charts organized within a Kendo UI for Angular ListView, including custom pagination.
+
+## How to Run
+### Installation
+1. `npm install` 
+
+### Running
+1. `ng serve` 
+2. Explore the chart dashboard with pagination.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.0.
 
@@ -25,3 +39,6 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+---
+Stay connected: [@danywalls](https://twitter.com/danywalls)
